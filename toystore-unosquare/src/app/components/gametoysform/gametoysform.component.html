@@ -1,11 +1,45 @@
-<div class="container">
-   
-    <div class="row">
-        <div class="col-md-8">
+<div class="card">
+    <div class="card-body">
+        <form>
+            <!-- (ngSubmit)="onSubmit(productForm)" #productForm="ngForm" -->
+            <!-- TO UPDATE -->
+            <input type="hidden">
+            <!-- [(ngModel)]="productService.selectedProduct.$key" #$key="ngModel"  name="$key" -->
 
-        </div>
-        <div class="col-md-4">
-            <p>gametoysform works!</p>
-        </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" placeholder="Add an item">
+                <!-- [(ngModel)]="productService.selectedProduct.name"  #name="ngModel"-->
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="Description" placeholder="Add a description">
+                <!-- [(ngModel)]="productService.selectedProduct.category" #category="ngModel"-->
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="MaxAge" placeholder="Add a max age">
+                <!-- [(ngModel)]="productService.selectedProduct.location" #location="ngModel"-->
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="number" class="form-control" name="price" placeholder="Add a price">
+                    <!-- [(ngModel)]="productService.selectedProduct.price" #price="ngModel"-->
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="Company" placeholder="Add a company">
+                <!-- [(ngModel)]="productService.selectedProduct.category" #category="ngModel"-->
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-plus-circle"></i> Add A Product
+                </button>
+                <button class="btn btn-secondary" type="reset">
+                    <!--  (click)="resetForm(productForm)" -->
+                    <i class="fas fa-sync-alt"></i> Reset
+                </button>
+            </div>
+        </form>
     </div>
 </div>

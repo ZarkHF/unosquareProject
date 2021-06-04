@@ -13,20 +13,46 @@ export class GametoysComponent implements OnInit {
   gametoyArray: Array<any>;
   gametoySuscription: Subscription;
 
+  visibleForm = false;
+
   tableContent = [
     { field: 'Id', header: 'Id', width: '5vw' },
     { field: 'Name', header: 'Name', width: '5vw' },
-    { field: 'Age', header: 'Age', width: '5vw' },
+    { field: 'MaxAge', header: 'Age', width: '5vw' },
     { field: 'Price', header: 'Price', width: '5vw' },
     { field: 'Company', header: 'Company', width: '5vw' },
-    { field: 'Id', header: 'Id', width: '5vw' },
     { field: 'Actions', header: '', width: '5vw' }
   ]
-  
+
   constructor(
     public service: GameToysService
   ) {
-    this.gametoyArray = [];
+    this.gametoyArray = [
+      {
+        Id: 1,
+        Name: "Barbie Developer",
+        MaxAge: 12,
+        Price: 25.99,
+        Company: "Mattel",
+        Description: ""
+      },
+      {
+        Id: 2,
+        Name: "xyc",
+        MaxAge: 4,
+        Price: 75.5,
+        Company: "Marvel",
+        Description: ""
+      },
+      {
+        Id: 3,
+        Name: "abc",
+        MaxAge: 18,
+        Price: 99.99,
+        Company: "Nintendo",
+        Description: ""
+      }
+    ];
   }
 
   ngOnInit(): void {
@@ -35,11 +61,11 @@ export class GametoysComponent implements OnInit {
 
   getInventory() {
     /* console.log('onSearch', request); */
-    this.service.GetInventory();
+    /* this.service.GetInventory(); */
 
-    /* this.gametoySuscription = this.service.GetInventory().subscribe(it => {
+    /* this.gametoySuscription =  */this.service.GetInventory().subscribe(it => {
       console.log('response', it);
-    }); */
+    });
   }
 
 }
