@@ -1,0 +1,12 @@
+@import "styles-prime";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    background: #373b44;
+    background: -webkit-linear-gradient(to left, #4286f4, #373b44); 
+    background: linear-gradient(
+        to left,
+        #4286f4,
+        #373b44
+    ); 
+}
